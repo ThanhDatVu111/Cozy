@@ -2,6 +2,7 @@ import React from "react";
 import { NAVBAR_HEIGHT } from "@/lib/constants";
 import Image from "next/image";
 import Link from "next/link";
+import { Button } from "./ui/button";
 
 const Navbar = () => {
   return (
@@ -37,17 +38,21 @@ const Navbar = () => {
           Discover your perfect rental apartment with our advanced search
         </p>
         <div className="flex items-center gap-5">
-          <Link
-            href="/signin"
-            className="text-white border-white bg-transparent hover:bg-white hover:text-primary-700 rounded-lg"
-          >
-            Sign In
+          <Link href="/signin">
+            <Button
+              variant="outline"
+              className="text-white border-white bg-transparent hover:bg-white hover:text-primary-700 rounded-lg"
+            >
+              Sign In
+            </Button>
           </Link>
-          <Link
-            href="/signup"
-            className="text-white border-white bg-transparent hover:bg-white hover:text-primary-700 rounded-lg"
-          >
-            Sign Up
+          <Link href="/signup">
+            <Button
+              variant="secondary"
+              className="text-white border-white bg-secondary-600 hover:bg-white hover:text-primary-700 rounded-lg"
+            >
+              Sign Up
+            </Button>
           </Link>
         </div>
       </div>
